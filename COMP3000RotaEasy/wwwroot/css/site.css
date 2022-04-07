@@ -64,6 +64,9 @@ body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
 }
+.main{
+    margin:20px;
+}
 
 .footer {
     position: absolute;
