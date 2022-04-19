@@ -5,38 +5,61 @@
 }
 
 <div style="border-radius: 25px; background-color: #475F6D; margin:30px; margin-top: 10px; margin-bottom: 10px;" class="card">
-    <div style="width:95%; height: 95%">
-        <div class="row" style="margin: 20px;">
-            <div class="col" id="employeeBtn" style="border-radius: 25px; background-color: #86AAB6; margin: 30px; text-align: center;">
-                <h1>EMPLOYEES</h1>
-            </div>
-            <div class="col" id="storeBtn" style="border-radius: 25px; background-color: #E2E8ED; margin: 30px; text-align: center;">
-                <h1>STORE</h1>
-            </div>
-            <div class="col" id="timetableBtn" style="border-radius: 25px; background-color: #86AAB6; margin: 30px;  text-align: center;">
-                <h1>TIMETABLE</h1>
-            </div>
-        </div>
-        <div class="row" style="margin: 20px;">
-            <div class="col" id="calendarBtn" style="border-radius: 25px; background-color: #E2E8ED; margin: 30px; text-align: center;">
-                <h1>CALENDAR</h1>
-            </div>
-            <div class="col" id="homeBtn" style="border-radius: 25px; background-color: #86AAB6; margin: 30px; text-align: center;">
-                <h1>HOME</h1>
-            </div>
-            <div class="col" id="linksBtn" style="border-radius: 25px; background-color: #E2E8ED; margin: 30px; text-align: center;">
-                <h1>Helpful Links</h1>
-            </div>
-        </div>
-        <div class="row" style="margin: 20px;">
-            <div class="col">
-            </div>
-            <div class="col-auto" id="settingsBtn" style="border-radius: 25px; background-color: #E2E8ED; margin: 30px; text-align: center; ">
-                <h1>SETTINGS</h1>
-            </div>
-            <div class="col">
-            </div>
-        </div>
+    @section PageTitle{
+        <h1 style="text-align:right; font-size:xx-large;">DASHBOARD</h1>
+    }
+    <style>
+        .buttonLight {
+            background-color: #E2E8ED;
+            padding: 10px;
+            margin: 20px;
+            width:max-content;
+            border-radius: 25px;
+            border: none;
+        }
+        .buttonDark {
+            background-color: #86AAB6;
+            padding: 10px;
+            margin: 20px;
+            width: max-content;
+            border-radius: 25px;
+            border:none;
+        }
+    </style>
 
+    @* BUTTONS *@
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm" style="text-align:center">
+                <button class="buttonLight" asp-page="/Employees">EMPLOYEES</button>               
+            </div>
+            <div class="col-sm" style="text-align:center">
+                <button class="buttonDark" asp-page="/Stores">STORE</button>    
+            </div>
+            <div class="col-sm" style="text-align:center">
+                <button class="buttonLight" asp-page="/Timetable">TIMETABLE</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm" style="text-align:center">
+                <button class="buttonDark" asp-page="/Calendar">CALENDAR</button>
+            </div>
+            <div class="col-sm" style="text-align:center">
+                <button class="buttonLight" asp-page="/Index">HOME</button>
+            </div>
+            <div class="col-sm" style="text-align:center">
+                <button class="buttonLight" asp-page="/Links">HELPFUL LINKS</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm" style="text-align:center">
+            </div>
+            <div class="col-sm" style="text-align:center">
+                <button class="buttonDark" asp-page="/Settings">SETTINGS</button>
+            </div>
+            <div class="col-sm" style="text-align:center">
+            </div>
+        </div>
     </div>
+
 </div>
