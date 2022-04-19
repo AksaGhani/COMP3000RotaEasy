@@ -4,6 +4,39 @@
     ViewData["Title"] = "Employees";
 }
 
-<div style="border-width: 10px; color:azure">
-    <h1>HELLO THIS IS A PRACTIVE EMPLOYEES PAGE.</h1>
+<div style="border-radius: 25px; background-color: #475F6D; margin:30px; margin-top: 10px; margin-bottom: 10px;" class="card">
+    <div style="padding: 10px; margin: 10px; color: white">
+        <h2 style="font-family:'Times New Roman', Times, serif; color:white; text-align:left;">EMPLOYEE DETAILS</h2>
+        <div class="card" style="background-color: #5B7787; padding: 15px; border-radius: 25px;">
+            <button class="btn-success">Add New Employee</button>
+            <table class="table table-bordered" style="color:white; text-align:center; padding: 5px; border-radius:25px;">
+                <thead>
+                    <tr>
+                        <th>Employee No.</th>
+                        <th>Role</th>
+                        <th>Name</th>
+                        <th>Contact</th>
+                        <th>Contracted Hours</th>
+                        <th>Availability</th>
+                        <th>Overtime Hours</th>
+                        <th>Sick Days</th>
+                        <th>Total Holiday Hrs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="employeeNum"></td>
+                        <td id="role"></td>
+                        <td id="name"></td>
+                        <td id="contact"></td>
+                        <td id="contractedHrs"></td>
+                        <td id="availability"></td>
+                        <td id="overtime"></td>
+                        <td id="sickDays"></td>
+                        <td id="totalHol"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
