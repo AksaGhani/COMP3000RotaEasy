@@ -13,53 +13,61 @@
             background-color: #E2E8ED;
             padding: 10px;
             margin: 20px;
-            width:max-content;
+            width: 250px;
+            height:160px;
             border-radius: 25px;
             border: none;
+            font-size:x-large;
+            font-family:'Times New Roman';
         }
         .buttonDark {
             background-color: #86AAB6;
             padding: 10px;
             margin: 20px;
-            width: max-content;
+            width: 250px;
+            height: 160px;
             border-radius: 25px;
-            border:none;
+            border: none;
+            font-size: x-large;
+            font-family: 'Times New Roman';
         }
     </style>
 
     @* BUTTONS *@
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm" style="text-align:center">
-                <button class="buttonLight" asp-page="/Employees">EMPLOYEES</button>               
+        <form method="get">
+            <div class="row">
+                <div class="col-sm" style="text-align:center">
+                    <button class="buttonLight" asp-page="./Employees">EMPLOYEES</button>               
+                </div>
+                <div class="col-sm" style="text-align:center">
+                    <button class="buttonDark" asp-page="./Stores">STORE</button>    
+                </div>
+                <div class="col-sm" style="text-align:center">
+                    <button class="buttonLight" asp-page="/Timetable">TIMETABLE</button>
+                </div>
             </div>
-            <div class="col-sm" style="text-align:center">
-                <button class="buttonDark" asp-page="/Stores">STORE</button>    
+            <div class="row">
+                <div class="col-sm" style="text-align:center">
+                    <button class="buttonDark" asp-page="./Calendar">CALENDAR</button>
+                </div>
+                <div class="col-sm" style="text-align:center">
+                    <button class="buttonLight" asp-page="./Index">HOME</button>
+                </div>
+                <div class="col-sm" style="text-align:center">
+                    <button  class="buttonDark" asp-page="./Links">HELPFUL LINKS</button>
+                </div>
             </div>
-            <div class="col-sm" style="text-align:center">
-                <button class="buttonLight" asp-page="/Timetable">TIMETABLE</button>
+            <div class="row">
+                <div class="col-sm" style="text-align:center">
+                </div>
+                <div class="col-sm" style="text-align:center">
+                    <button class="buttonDark" asp-page="./Settings">SETTINGS</button>
+                </div>
+                <div class="col-sm" style="text-align:center">
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm" style="text-align:center">
-                <button class="buttonDark" asp-page="/Calendar">CALENDAR</button>
-            </div>
-            <div class="col-sm" style="text-align:center">
-                <button class="buttonLight" asp-page="/Index">HOME</button>
-            </div>
-            <div class="col-sm" style="text-align:center">
-                <button class="buttonLight" asp-page="/Links">HELPFUL LINKS</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm" style="text-align:center">
-            </div>
-            <div class="col-sm" style="text-align:center">
-                <button class="buttonDark" asp-page="/Settings">SETTINGS</button>
-            </div>
-            <div class="col-sm" style="text-align:center">
-            </div>
-        </div>
+        </form>
     </div>
 
 </div>
