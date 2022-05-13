@@ -1,5 +1,5 @@
 ﻿@page
-@model COMP3000RotaEasy.Pages.EmployeesModel
+@model IEnumerable<COMP3000RotaEasy.Models.Users>
 @{
     ViewData["Title"] = "Employees";
 }
@@ -14,7 +14,7 @@
         <h2 style="font-family:'Times New Roman', Times, serif; color:white; text-align:left;">EMPLOYEE DETAILS</h2>
 
         <div class="card" style="background-color: #5B7787; padding: 15px; border-radius: 25px;">
-            <button class="btn-success">Add New Employee</button>
+            <button class="btn-success" style="padding:10px; margin:10px;">Add New Employee</button>
             <table class="table table-bordered table-hover" style="color:white; text-align:center; padding: 5px; border-radius:25px;">
                 <thead>
                     <tr>
@@ -43,6 +43,27 @@
                     </tr>
                 </tbody>
             </table>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td>
+
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
+
