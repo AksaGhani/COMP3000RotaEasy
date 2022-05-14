@@ -1,5 +1,5 @@
 ﻿@page
-@model COMP3000RotaEasy.Pages.CalendarModel
+@model COMP3000RotaEasy.Pages.CalendarModel;
 @{
     ViewData["Title"] = "Calendar";
 }
@@ -15,7 +15,7 @@
 
 <!--INITIALISE FULL CALENDAR-->
 <script>
-
+    //initialise full calendar (v5.11.0)
     document.addEventListener('DOMContentLoaded', function () {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -24,10 +24,15 @@
         calendar.render();
     });
 
+    //
+
 </script>
 
 <div id="calendar">
 
+</div>
+<div>
+    
 </div>
 
 

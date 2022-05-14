@@ -4,6 +4,30 @@
     ViewData["Title"] = "Timetable";
 }
 
+@section Styles {
+    <link rel="stylesheet" href="/lib/fullcalendar-scheduler-5.11.0/lib/main.css">
+}
+
+@section Scripts {
+    <script src="/lib/fullcalendar-scheduler-5.11.0/lib/main.js"></script>
+}
+
+<div id="calendar">
+
+</div>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'timeGridWeek'
+        });
+        calendar.render();
+    });
+
+</script>
+
 <div style="border-radius: 25px; background-color: #475F6D; margin:30px; margin-top: 10px; margin-bottom: 10px;" class="card">
 
     @section PageTitle{
