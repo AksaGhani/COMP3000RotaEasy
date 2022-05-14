@@ -5,76 +5,21 @@
 }
 <head>
     <link rel="stylesheet" href="~/css/site.css" />
+
 </head>
 
-<div style="background-color: #475F6D; border-radius: 25px; padding: 10px; margin: 20px;">
+<div style="border-radius: 15px; background-color: #475F6D; margin:10px; margin-top: 10px; margin-bottom: 10px;">
     @section PageTitle
     {
         <h1 style="text-align:right; font-size:xx-large;">HOME</h1>
     }
 
-    <div id="notifications" style="border-radius: 25px; background-color:#5B7787; margin:50px; padding:20px;">
+    
 
-        <h2 style="font-family: 'Times New Roman', Times, serif; text-align:center; color:white; padding:5px;">NOTIFICATION CENTRE</h2>
-
-        <div class="row" style="margin: 10px; padding:10px">
-
-            <div class="card" style="background-color: #E2E8ED; margin: 5px; border-radius: 20px; width: 30%; ">
-                <h5 style="font-family: 'Times New Roman', Times, serif; text-align:center; padding:5px;">Sick Days</h5>
-                <div style="padding:10px; margin:10px;">
-                    <p>No employees are off sick this week!</p>
-                </div>
-            </div>
-
-            <div class="card" style="background-color: #E2E8ED; margin:5px; border-radius: 20px; width:40% ">
-                <h5 style="font-family: 'Times New Roman', Times, serif; text-align:center; padding:5px">Holiday Requests</h5>
-                <div style="padding:10px; margin:10px;">
-                    <p>You have one new holiday request.</p>
-                    <button class="btn">View request</button>
-                </div>
-            </div>
-
-            <div class="card" style="background-color: #E2E8ED; margin: 5px; border-radius: 20px; width: 25%;">
-                <h5 style="font-family: 'Times New Roman', Times, serif; text-align:center; padding:5px">OTHER</h5>
-                <div style="padding:10px; margin:10px;">
-                    <p>You have no other notifications waiting for you!</p>
-                    <p>Ensure you check your emails for new updates within the company.</p>
-                </div>
-            </div>
-
-        </div>
-        <div class="row" style="text-align:right; margin: 10px; padding:5px;">
-            <button style="background-color: #4F98ED; margin:2px; border:none; border-radius: 15px; float: right;" asp-page="/Calendar">Go to Calendar ></button>
-        </div>
-    </div>
-
-    <div id="budget" class="card" style="border-radius: 25px; background-color: #5b7787; margin: 50px; ">
-
-        <h2 style="font-family: 'Times New Roman', Times, serif; text-align:center; color:white;">BUDGET</h2>
-
-        <div class="card" style="background-color: #E2E8ED; padding:10px; margin: 10px;">
-            <h5>Store Sales: 'Table'</h5>
-            <p>Weekly view.</p>
-            <div class="table-responsive">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Target Sales</th>
-                            <th>Actual Sales</th>
-                            <th>Hours spent</th>
-                            <th>Hours available</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>"£15603"</td>
-                            <td>"  "</td>
-                            <td>"  "</td>
-                            <td>"  "</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+    <div style="color: white; padding:5px; margin:10px;">
+        <form>
+            <p>Your next Pay Day is scheduled for:</p>
+            
+        </form>
     </div>
 </div>
