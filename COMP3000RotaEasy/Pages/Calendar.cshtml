@@ -4,10 +4,33 @@
     ViewData["Title"] = "Calendar";
 }
 
-<div style="background-color: #475F6D; border-radius: 25px; padding: 10px; margin: 20px;">
-    @section PageTitle {
-        <h1 style="text-align:center; font-size:xx-large; font-family:'Times New Roman'; color: black;">CALENDAR</h1>
-    }
+@section Styles {
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.css">
+}
 
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.js"></script>
+}
+
+
+<!--INITIALISE FULL CALENDAR-->
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth'
+        });
+        calendar.render();
+    });
+
+</script>
+
+<div id="calendar">
 
 </div>
+
+
+
+
+
