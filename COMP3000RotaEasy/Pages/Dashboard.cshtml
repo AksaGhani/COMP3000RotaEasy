@@ -4,29 +4,30 @@
     ViewData["Title"] = "Dashboard";
 }
 
-<div style="border-radius: 25px; background-color: #475F6D; margin:30px; margin-top: 10px; margin-bottom: 10px;" class="card">
+<div style="border-radius: 15px; background-color: #475F6D; margin:10px; margin-top: 10px; margin-bottom: 10px;" class="card">
     @section PageTitle{
-        <h1 style="text-align:right; font-size:xx-large;">DASHBOARD</h1>
+        <h1 style="text-align:center; font-size:larger;">DASHBOARD</h1>
     }
     <style>
         .buttonLight {
             background-color: #E2E8ED;
-            padding: 10px;
-            margin: 20px;
-            width: 250px;
-            height:160px;
-            border-radius: 25px;
+            padding: 5px;
+            margin: 10px;
+            width: 146px;
+            height: 170px;
+            border-radius: 10px;
             border: none;
-            font-size:x-large;
-            font-family:'Times New Roman';
+            font-size: x-large;
+            font-family: 'Times New Roman';
         }
+
         .buttonDark {
             background-color: #86AAB6;
-            padding: 10px;
-            margin: 20px;
-            width: 250px;
-            height: 160px;
-            border-radius: 25px;
+            padding: 5px;
+            margin: 10px;
+            width: 146px;
+            height: 170px;
+            border-radius: 10px;
             border: none;
             font-size: x-large;
             font-family: 'Times New Roman';
@@ -36,35 +37,36 @@
     @* BUTTONS *@
     <div class="container-fluid">
         <form method="get">
+
             <div class="row">
-                <div class="col-sm" style="text-align:center">
-                    <button class="buttonLight" asp-page="./Employees">EMPLOYEES</button>               
-                </div>
-                <div class="col-sm" style="text-align:center">
-                    <button class="buttonDark" asp-page="./Stores">STORE</button>    
-                </div>
-                <div class="col-sm" style="text-align:center">
-                    <button class="buttonLight" asp-page="/Timetable">TIMETABLE</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm" style="text-align:center">
-                    <button class="buttonDark" asp-page="./Calendar">CALENDAR</button>
-                </div>
-                <div class="col-sm" style="text-align:center">
+                <div class="col-xs-auto" style="text-align:center">
                     <button class="buttonLight" asp-page="./Index">HOME</button>
                 </div>
-                <div class="col-sm" style="text-align:center">
-                    <button  class="buttonDark" asp-page="./Links">HELPFUL LINKS</button>
+
+                <div class="col-xs-auto" style="text-align:center">
+                    <button class="buttonDark" asp-page="./StoreShifts">STORE SHIFTS</button>
                 </div>
             </div>
+
+
             <div class="row">
-                <div class="col-sm" style="text-align:center">
+                <div class="col-xs-auto" style="text-align:center">
+                    <button class="buttonDark" asp-page="./Profile">PROFILE</button>
                 </div>
-                <div class="col-sm" style="text-align:center">
-                    <button class="buttonDark" asp-page="./Settings">SETTINGS</button>
+
+                <div class="col-xs-auto" style="text-align:center">
+                    <button class="buttonLight" asp-page="/YourShifts">YOUR SHIFTS</button>
                 </div>
-                <div class="col-sm" style="text-align:center">
+            </div>
+
+
+            <div class="row">
+                <div class="col-xs-auto" style="text-align:center">
+                    <button class="buttonLight" asp-page="./Calendar">CALENDAR</button>
+                </div>
+
+                <div class="col-xs-auto" style="text-align:center">
+                    <button class="buttonDark" asp-page="./Links">HELPFUL LINKS</button>
                 </div>
             </div>
         </form>

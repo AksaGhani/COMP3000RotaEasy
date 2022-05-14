@@ -14,53 +14,36 @@
         <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #667F97; color: white; text-align: center;">
             <a class="navbar-brand" asp-page="/Dashboard" style="color: white; font-size:x-large;">
                 <img src="~/img/Logo.png" width="75" height="75" alt="RotaEasy Logo" loading="lazy" />
-                RotaEasy
             </a>
 
-            @*<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDropdown" aria-controls="navbarDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon" style="color:white"></span>
-                </button>*@
+            <div class="form-inline">
+                @*TITLE*@
+                @RenderSection("PageTitle", false)
+            </div>
 
-            @*<div class="collapse navbar-collapse" id="navbarSupportedContent" data-toggle="dropdown">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="dropdown-item active">
-                            <a class="nav-link" asp-page="/Dashboard">Dashboard</a>
-                        </li>
-                        <li class="dropdown-item"><a class="nav-link" asp-page="/Index">Home</a></li>
-                        <li class="dropdown-item"><a class="nav-link" asp-page="/Timetable">Timetable</a></li>
-                        <li class="dropdown-item"><a class="nav-link" asp-page="/Employees">Employees</a></li>
-                        <li class="dropdown-item"><a class="nav-link" asp-page="/Stores">Store</a></li>
-                        <li class="dropdown-item"><a class="nav-link" asp-page="/Calendar">Calendar</a></li>
-                        <li class="dropdown-item"><a class="nav-link" asp-page="/Links">Helpful Links</a></li>
-                        <li class="dropdown-item"><a class="nav-link" asp-page="/Settings">Settings</a></li>
-                    </ul>
-                </div>*@
-
-
-            <div class="dropdown">
+            <div class="btn-group dropleft">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="navbar-toggler-icon" style="color:white"></span>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" asp-page="/Index">Home</a>
-                    <a class="dropdown-item" asp-page="/Timetable">Your Shifts</a>
-                    <a class="dropdown-item" asp-page="/Stores">Store Shifts</a>
+                    <a class="dropdown-item" asp-page="/YourShifts">Your Shifts</a>
+                    <a class="dropdown-item" asp-page="/StoreShifts">Store Shifts</a>
                 </div>
             </div>
 
-
-
         </nav>
-        <div style="float:right; text-align: right;">
-            @*TITLE*@
-            @RenderSection("PageTitle", false)
-        </div>
+
     </header>
-    <div class="container">
+
+
+    @*<div class="container">*@
         <main role="main" class="container">
             @RenderBody()
         </main>
-    </div>
+    @*</div>*@
+
+
     @*BACK BUTTON --> TAKES YOU TO DASHBOARD*@
     <div>
         <a asp-page="/Dashboard">
