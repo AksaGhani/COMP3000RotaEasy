@@ -12,6 +12,7 @@ namespace COMP3000RotaEasy.Models
         public int UserId { get; set; }
         public int EventId { get; set; }
 
+        //relational data
         public virtual Events Event { get; set; }
         public virtual Users User { get; set; }
     }

@@ -14,11 +14,12 @@ namespace COMP3000RotaEasy.Models
             UsersEvents = new HashSet<UsersEvents>();
         }
 
+
         public int EventId { get; set; }
         public string EventName { get; set; }
         public string EventDescription { get; set; }
         public DateTime EventStart { get; set; }
-        public DateTime? EventEnd { get; set; }
+        public DateTime EventEnd { get; set; }
 
         public virtual ICollection<UsersEvents> UsersEvents { get; set; }
     }
