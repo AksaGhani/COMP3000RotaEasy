@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace COMP3000RotaEasy.Pages
+namespace COMP3000RotaEasy.Pages.StoreShifts
 {
-    public class SettingsModel : PageModel
+    public class IndexModel : PageModel
     {
         public void OnGet()
         {
