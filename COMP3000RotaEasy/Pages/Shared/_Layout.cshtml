@@ -37,13 +37,9 @@
                     <li class="nav-item"><a class="nav-link" asp-page="/Calendar">Calendar</a></li>
                     <li class="nav-item"><a class="nav-link" asp-page="/Links">Helpful Links</a></li>
                     <li class="nav-item"><a class="nav-link" asp-page="/Settings">Settings</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-page="/TimetableShifts/Index">testShifts</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-page="/pracEvents">EVENTS</a></li>
                 </ul>
-            </div>
-
-
-            <div class="form-inline" style="float:right; text-align: right;">
-                @*TITLE*@
-                @RenderSection("PageTitle", false)
             </div>
         </nav>
     </header>
@@ -53,7 +49,7 @@
         @RenderBody()
 
         @*BACK BUTTON --> TAKES YOU TO DASHBOARD*@
-        <a asp-page="/Dashboard">
+        <a asp-page="/Dashboard/Dashboard">
             <img src="~/img/back icon.jpg" width="50" height="50" style="float:right; margin: 10px; padding: 10px;" />
         </a>
 

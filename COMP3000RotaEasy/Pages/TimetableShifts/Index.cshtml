@@ -1,0 +1,73 @@
+﻿@page
+@model COMP3000RotaEasy.Pages.TimetableShifts.IndexModel
+
+@{
+    ViewData["Timetable"] = "Index";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="/lib/fullcalendar-scheduler-5.11.0/lib/main.css">
+}
+
+@section Scripts {
+    <script src="/lib/fullcalendar-scheduler-5.11.0/lib/main.js"></script>
+}
+
+<div id="calendar">
+
+</div>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'timeGridWeek'
+        });
+        calendar.render();
+    });
+
+</script>
+
+<h2 style="font-family:'Times New Roman'; color:white; text-align: left;">STORE TIMETABLE</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Shifts[0].ShiftDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shifts[0].StartTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shifts[0].EndTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Shifts)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShiftDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndTime)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.ShiftId">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.ShiftId">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.ShiftId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
