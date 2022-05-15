@@ -1,0 +1,92 @@
+﻿@page
+@model COMP3000RotaEasy.Pages.EmpoyeeProfile.IndexModel
+
+@{
+    ViewData["Title"] = "Your Profile";
+}
+
+@section PageTitle{
+    <h1 style="text-align:center; font-size:x-large;">PROFILE</h1>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].UserType)
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.Users[1].UserType)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].FirstName)
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.Users[1].FirstName)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].LastName)
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.Users[1].LastName)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].Email)
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.Users[1].Email)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].PhoneNo)
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.Users[1].PhoneNo)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].HomeAdd)
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.Users[1].HomeAdd)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].Gender)
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.Users[1].Gender)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].Ethnicity)
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.Users[1].Ethnicity)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Users[0].NoHolHours)
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.Users[1].NoHolHours)
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+ 
+    </tbody>
+</table>
+@*<a asp-page="/EmployeeProfile/Details" asp-route-id="">Details</a>
+<a asp-page="/EmployeeProfile/Edit"></a>*@
