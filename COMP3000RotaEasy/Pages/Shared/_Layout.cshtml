@@ -30,9 +30,9 @@
                     <li class="nav-item active">
                         <a class="nav-link" asp-page="/Dashboard/Dashboard">Dashboard</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" asp-page="/Index">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-page="/Home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" asp-page="/Timetable">Timetable</a></li>
-                    <li class="nav-item"><a class="nav-link" asp-page="/Employees">Employees</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-page="/Users/Index">Employees</a></li>
                     <li class="nav-item"><a class="nav-link" asp-page="/Stores">Store</a></li>
                     <li class="nav-item"><a class="nav-link" asp-page="/Calendar">Calendar</a></li>
                     <li class="nav-item"><a class="nav-link" asp-page="/Links">Helpful Links</a></li>
@@ -49,17 +49,16 @@
     </header>
 
 
-    <div class="container">
-        <main role="main" class="container">
-            @RenderBody()
+    <main role="main" class="container">
+        @RenderBody()
 
-            @*BACK BUTTON --> TAKES YOU TO DASHBOARD*@
-            <a asp-page="/Dashboard">
-                <img src="~/img/back icon.jpg" width="50" height="50" style="float:right; margin: 10px; padding: 10px;" />
-            </a>
+        @*BACK BUTTON --> TAKES YOU TO DASHBOARD*@
+        <a asp-page="/Dashboard">
+            <img src="~/img/back icon.jpg" width="50" height="50" style="float:right; margin: 10px; padding: 10px;" />
+        </a>
 
-        </main>
-    </div>
+     </main>
+ 
 
 
     <footer class="border-top footer text-muted" style="background-color: white;">

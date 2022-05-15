@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace COMP3000RotaEasy.Pages
 {
-    public class EmployeesModel : PageModel
+    public class HomeModel : PageModel
     {
         public void OnGet()
         {
