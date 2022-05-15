@@ -6,22 +6,13 @@
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
+  <h2 style="font-family:'Times New Roman', Times, serif; color:white; text-align:left;">EMPLOYEE DETAILS</h2>
 
-<p>
-    <a asp-page="./Users/Create" role="button">Create New</a>
-</p>
+        <form method="get">
+            <button class="btn" style="padding: 10px; margin: 10px; border-radius: 10px; background-color: #4F98ED" asp-page="/Users/Create">Add New Employee</button>
+        </form>
 
-<div style="border-radius: 25px; background-color: #475F6D; margin:30px; margin-top: 10px; margin-bottom: 10px; width:100%">
-
-
-    <div style="padding: 10px; margin: 10px; color: white; width:95%">
-        <h2 style="font-family:'Times New Roman', Times, serif; color:white; text-align:left;">EMPLOYEE DETAILS</h2>
-
-
-        <div style="background-color: #5B7787; border-radius: 15px; margin:10px;">
-            <button class="btn" style="padding: 10px; margin: 10px; border-radius: 10px; background-color: #4F98ED" asp-action="./Users/Create">Add New Employee</button>
-
-            <table class="table table-bordered table-hover" style="color: white;">
+            <table class="table table-bordered table-hover">
                 <thead>
                     <tr>
                         <th>
@@ -85,15 +76,13 @@
                             <td>
                                 @Html.DisplayFor(modelItem => item.NoHolHours)
                             </td>
-                            <td>
-                                <a asp-page="./Users/Edit" asp-route-id="@item.UserId">Edit</a> |
-                                <a asp-page="./Users/Details" asp-route-id="@item.UserId">Details</a> |
-                                <a asp-page="./Users/Delete" asp-route-id="@item.UserId">Delete</a>
+                            <td style="padding:2px">
+                                <a asp-page="/Users/Edit" asp-route-id="@item.UserId"><i class="fa fa-pencil-square-o">Edit</i></a> |
+                                <a asp-page="/Users/Details" asp-route-id="@item.UserId">Details</a> |
+                                <a asp-page="/Users/Delete" asp-route-id="@item.UserId"><i class="fa fa-trash"></i>Delete</a>
                             </td>
                         </tr>
                     }
                 </tbody>
             </table>
-        </div>
-    </div>
-</div>
+
