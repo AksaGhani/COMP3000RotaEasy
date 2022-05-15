@@ -1,0 +1,49 @@
+﻿@page
+@model COMP3000RotaEasy.Pages.EmployeeSick.UserSicknessModel
+
+@{
+    ViewData["Title"] = "UserSickness";
+}
+
+<h1>Add User Absence</h1>
+
+<h4>Sickdays</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Sickdays.SickStart" class="control-label"></label>
+                <input asp-for="Sickdays.SickStart" class="form-control" />
+                <span asp-validation-for="Sickdays.SickStart" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sickdays.SickEnd" class="control-label"></label>
+                <input asp-for="Sickdays.SickEnd" class="form-control" />
+                <span asp-validation-for="Sickdays.SickEnd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sickdays.UnpaidHours" class="control-label"></label>
+                <input asp-for="Sickdays.UnpaidHours" class="form-control" />
+                <span asp-validation-for="Sickdays.UnpaidHours" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sickdays.PaidHours" class="control-label"></label>
+                <input asp-for="Sickdays.PaidHours" class="form-control" />
+                <span asp-validation-for="Sickdays.PaidHours" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="/Calendar">Back</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
