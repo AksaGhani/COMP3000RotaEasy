@@ -1,0 +1,50 @@
+﻿@page
+@model COMP3000RotaEasy.Pages.pracEventsModel
+
+@{
+    ViewData["Title"] = "pracEvents";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>pracEvents</h1>
+
+<h4>Events</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Events.EventName" class="control-label"></label>
+                <input asp-for="Events.EventName" class="form-control" />
+                <span asp-validation-for="Events.EventName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Events.EventDescription" class="control-label"></label>
+                <input asp-for="Events.EventDescription" class="form-control" />
+                <span asp-validation-for="Events.EventDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Events.EventStart" class="control-label"></label>
+                <input asp-for="Events.EventStart" class="form-control" />
+                <span asp-validation-for="Events.EventStart" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Events.EventEnd" class="control-label"></label>
+                <input asp-for="Events.EventEnd" class="form-control" />
+                <span asp-validation-for="Events.EventEnd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
