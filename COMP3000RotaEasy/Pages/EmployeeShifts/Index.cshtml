@@ -1,0 +1,46 @@
+﻿@page
+@model COMP3000RotaEasy.Pages.EmployeeShifts.IndexModel
+
+@{
+    ViewData["Title"] = "Your Shifts";
+}
+
+@section PageTitle{
+    <h1 style="text-align:right; font-size:x-large;">YOUR SHIFTS</h1>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Shifts[0].ShiftDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shifts[0].StartTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shifts[0].EndTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Shifts)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShiftDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndTime)
+                </td>
+                <td>
+                    <a asp-page="./Details" asp-route-id="@item.ShiftId">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
