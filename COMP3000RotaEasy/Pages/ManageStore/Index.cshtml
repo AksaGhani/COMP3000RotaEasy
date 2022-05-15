@@ -1,0 +1,54 @@
+﻿@page
+@model COMP3000RotaEasy.Pages.ManageStore.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Stores</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Stores[0].StoreName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stores[0].StoreLocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stores[0].StoreAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stores[0].StoreZipCode)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Stores) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StoreName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StoreLocation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StoreAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StoreZipCode)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.StoreId"><i class="fa fa-pencil-square-o"></i>Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.StoreId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.StoreId"><i class="fa fa-trash"></i>Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
