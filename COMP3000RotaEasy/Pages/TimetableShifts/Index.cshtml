@@ -27,47 +27,7 @@
 
 <h2 style="font-family:'Times New Roman'; color:white; text-align: left;">STORE TIMETABLE</h2>
 
-<p>
-    <a asp-page="Create">Add Shift</a>
-</p>
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Shifts[0].ShiftDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Shifts[0].StartTime)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Shifts[0].EndTime)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.Shifts)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ShiftDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.StartTime)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.EndTime)
-                </td>
-                <td>
-                    <a asp-page="./Edit" asp-route-id="@item.ShiftId"><i class="fa fa-pencil-square-o">Edit</i></a> |
-                    <a asp-page="./Details" asp-route-id="@item.ShiftId">Details</a> |
-                    <a asp-page="./Delete" asp-route-id="@item.ShiftId"><i class="fa fa-trash"></i>Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
-
+<p>The following table demonstrates a potential view to utilise for the table, but does not work with backend.</p>
 
 <div style="border-radius: 25px; background-color: #475F6D; margin:30px; margin-top: 10px; margin-bottom: 10px;" class="card">
     <div style="padding:10px; margin:10px; color:white;">
@@ -131,7 +91,50 @@
     </div>
 </div>
 
+<p>The following table demonstrates a view of shifts which works with backend.</p>
 
+<p>
+    <a asp-page="Create">Add Shift</a>
+</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Shifts[0].ShiftDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shifts[0].StartTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shifts[0].EndTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Shifts)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShiftDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndTime)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.ShiftId"><i class="fa fa-pencil-square-o">Edit</i></a> |
+                    <a asp-page="./Details" asp-route-id="@item.ShiftId">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.ShiftId"><i class="fa fa-trash"></i>Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>The following view from FullCalendar which is a JavaScript calendar, could be implemented.</p>
 
 <div id="calendar">
 
