@@ -4,7 +4,7 @@ using COMP3000RotaEasy.Models;
 
 namespace UnitTests
 {
-    public class UnitTest1
+    public class UserContollerTest
     {
         [Fact]
         public void Test1()
